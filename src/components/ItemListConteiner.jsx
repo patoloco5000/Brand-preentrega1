@@ -1,10 +1,16 @@
-import React from 'react'
+import {Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from "bootstrap";
 
-const ItemListConteiner = ({greeting}) => {
-  return (
-    <div className='container text-center'>{greeting}</div>
-  )
-}
+const ItemListConteiner = () => {
+  return 
+  <div>ItemList
+  <link to="/Cart" >
+    <button>Ir a Cart</button>
+  </link> 
 
+
+  </div>;
+
+};
 export default ItemListConteiner

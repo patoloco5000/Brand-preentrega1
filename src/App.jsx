@@ -1,18 +1,34 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListConteiner from "./components/ItemListConteiner";
 import NavBar from "./components/NavBar";
-import { ChakraProvider } from "@chakra-ui/react";
+import Cart from "./components/Cart";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => {
+
+
+const App =() => {
+return (
+
   
-    return (
-    <ChakraProvider>
-      <NavBar/>
-      <ItemListConteiner greeting={"Bienvenidos a mi tienda on Line"} />
-    </ChakraProvider>
+  <BrowserRouter>
+
     
-    );
-};
+    <NavBar />
+    
+    <Routes>
+
+      <Route exact path="/ItemList" element={<ItemListConteiner />}/>
+
+      <Route exact path="/cart" element={<Cart />}/>
+
+    </Routes>
+
+
+  </BrowserRouter>
+
+
+);
+}
 
 
 
