@@ -9,12 +9,12 @@ const ItemList = ({ gloves }) => {
                 <Item
                 key={glove.id}
                 id={glove.id}
-                name={glove.name}
+                name={glove.nombre}
                 description={glove.description}
-                price={glove.price}
+                price={glove.precio}
                 stock={glove.stock}
                 category={glove.category}
-                image={glove.image}
+                image={glove.imagen}
                 />
             ))}
         </Container>

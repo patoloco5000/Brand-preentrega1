@@ -12,13 +12,13 @@ const NavBar = () => {
             <Menu>
             <MenuButton>Categorias</MenuButton>
                     <MenuList>
-                        <MenuItem>Categoria A</MenuItem>
+                        <MenuItem><Route exact path="/ItemList" element={<ItemListConteiner />}/>Guantes</MenuItem>
                         <MenuItem>Categoria B</MenuItem>
                     </MenuList>
             </Menu>
             
             
-            <CartWidget/>     
+            <CartWidget/> 
 
         </div>
         </nav>    

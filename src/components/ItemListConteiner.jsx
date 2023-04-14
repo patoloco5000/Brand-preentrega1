@@ -1,16 +1,19 @@
+import ItemCount from "./ItemCount";
 import {Link} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "bootstrap";
 
-const ItemListConteiner = () => {
-  return 
-  <div>ItemList
-  <link to="/Cart" >
-    <button>Ir a Cart</button>
-  </link> 
 
-
-  </div>;
-
+export const ItemListConteiner = ({texto}) => {
+  const onAdd = (quantity) => {
+    console.log(`compraste ${quantity} unidades`);
+  }
+  
+  return (
+    <>
+      <Title greeting={texto}/>
+      <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+    </>
+  )
 };
 export default ItemListConteiner
